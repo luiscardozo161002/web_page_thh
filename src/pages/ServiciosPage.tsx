@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import { Truck, ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -6,6 +7,11 @@ import Services from "@/components/sections/Services"
 export default function ServiciosPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Servicios"
+        description="Minería de piedra de cal, arena y grava, transporte público de carga, renta de maquinaria, barrenación y perforación, carga y acarreo. Soluciones integrales para la industria."
+        path="/servicios"
+      />
       <PageHeader
         title="Nuestros Servicios"
         subtitle="Soluciones integrales en minería, logística y transporte industrial para el sector productivo del centro del país."

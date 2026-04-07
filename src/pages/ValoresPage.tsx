@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import { Users, HeartHandshake, Star, Shield, Zap } from "lucide-react"
 
@@ -67,6 +68,11 @@ const valores = [
 export default function ValoresPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Nuestros Valores"
+        description="Los cinco pilares que guían cada decisión en THH: honestidad, responsabilidad, trabajo en equipo, innovación y compromiso con la industria mexicana."
+        path="/valores"
+      />
       <PageHeader
         title="Nuestros Valores"
         subtitle="Los cinco pilares que guían cada decisión operativa, comercial y humana dentro de Transportes Hidro-Hidalguenses."

@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import ButtonMailto from "@/components/ui/ButtonMailto"
 import {
@@ -52,6 +53,11 @@ const commitments = [
 export default function PrevencionPsicosocialPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Prevención Psicosocial"
+        description="Política de prevención de riesgos psicosociales de Transportes Hidro-Hidalguenses conforme a la NOM-035-STPS-2018. Conoce nuestros compromisos de bienestar laboral y entorno organizacional favorable."
+        path="/prevencion-psicosocial"
+      />
       <PageHeader
         title="Prevención de Riesgos"
         subtitle="Bienestar laboral y entorno organizacional favorable para todos los colaboradores de Transportes Hidro-Hidalguenses."

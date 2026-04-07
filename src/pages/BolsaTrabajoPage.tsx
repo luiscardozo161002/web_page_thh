@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { toast } from 'sonner';
+import SEO from '@/components/seo/SEO';
 import ButtonMailto from '@/components/ui/ButtonMailto';
 import { Briefcase, TrendingUp, Shield, Users, MapPin, Clock, ArrowRight, BadgeDollarSign, Trash2, Plus, Loader2 } from "lucide-react"
 import { motion } from 'framer-motion';
@@ -330,6 +331,11 @@ const benefits = [
 export default function BolsaTrabajoPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Bolsa de Trabajo"
+        description="Únete al equipo de Transportes Hidro-Hidalguenses. Consulta nuestras vacantes disponibles en operación, logística y administración para trabajar en la industria minera y de transporte."
+        path="/bolsa-de-trabajo"
+      />
       <PageHeader
         title="Bolsa de Trabajo"
         subtitle="Únete al equipo líder en infraestructura y logística. Buscamos talento apasionado por la excelencia."

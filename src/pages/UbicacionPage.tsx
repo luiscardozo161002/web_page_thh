@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import { MapPin, Phone, Mail, Clock, Navigation, Car, Building, User } from "lucide-react"
 
@@ -10,6 +11,11 @@ const referencias = [
 export default function UbicacionPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Nuestra Ubicación"
+        description="Visítanos en Calle Tercera No. 214, Pabellón de Arteaga, Aguascalientes. Sede principal de Transportes Hidro-Hidalguenses con fácil acceso desde la autopista México-Aguascalientes."
+        path="/ubicacion"
+      />
       <PageHeader
         title="Nuestra Ubicación"
         subtitle="Encuéntranos en Pabellón de Arteaga, Aguascalientes — ubicación estratégica para atender al sector industrial."

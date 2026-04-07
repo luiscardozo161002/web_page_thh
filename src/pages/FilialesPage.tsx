@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import { Building2, MapPin } from "lucide-react"
 import Subsidiaries from "@/components/sections/Subsidiaries"
@@ -18,6 +19,11 @@ const locations = [
 export default function FilialesPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Nuestras Sedes"
+        description="Transportes Hidro-Hidalguenses cuenta con 2 sedes operativas: Pabellón de Arteaga, Aguascalientes (sede principal) y Tula de Allende, Hidalgo. Atendemos la demanda industrial en todo el país."
+        path="/filiales"
+      />
       <PageHeader
         title="Nuestras Sedes"
         subtitle="Contamos con 2 sedes estratégicamente ubicadas para atender la demanda industrial en el país."

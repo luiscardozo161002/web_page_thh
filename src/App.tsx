@@ -1,4 +1,5 @@
 import { BrowserRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import AppRoutes from './routes/AppRoutes'
 import { ThemeProvider } from './context/ThemeContext'
 import { AuthProvider } from './hooks/useAuth'
@@ -7,6 +8,7 @@ import { Toaster } from 'sonner'
 
 function App() {
   return (
+    <HelmetProvider>
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
@@ -16,6 +18,7 @@ function App() {
         </BrowserRouter>
       </AuthProvider>
     </ThemeProvider>
+    </HelmetProvider>
   )
 }
 

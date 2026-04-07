@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import Hero from "@/components/layout/Hero"
 import Services from "@/components/sections/Services"
 import MissionVision from "@/components/sections/MissionVision"
@@ -8,6 +9,11 @@ import ContactSection from "@/components/sections/ContactSection"
 export default function Home() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Minería y Transporte Industrial"
+        description="Empresa mexicana líder en explotación de yacimientos, minería de materiales pétreos, transporte público de carga y renta de maquinaria en Aguascalientes e Hidalgo."
+        path="/"
+      />
       <Hero />
 
       {/* Intro */}

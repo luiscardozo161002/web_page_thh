@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import { Building2, Briefcase, Users, MapPin, CheckCircle } from "lucide-react"
 import AboutContent from "@/components/sections/AboutContent"
@@ -45,6 +46,11 @@ const clientes = [
 export default function AcercaPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Acerca de Nosotros"
+        description="Conoce Transportes Hidro-Hidalguenses S.A. de C.V.: más de 25 años de experiencia en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga para la industria mexicana."
+        path="/acerca"
+      />
       <PageHeader
         title="Acerca de THH"
         subtitle="Empresa mexicana especializada en servicios para la industria, enfocada en la explotación de yacimientos, manejo de materiales pétreos y transporte público de carga."

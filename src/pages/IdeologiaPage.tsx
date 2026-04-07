@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import { Lightbulb, Users, Shield, Zap, ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
@@ -23,6 +24,11 @@ const pillars = [
 export default function IdeologiaPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Ideología"
+        description="Los principios y pilares ideológicos que definen la identidad operativa y cultural de Transportes Hidro Hidalguenses S.A. de C.V."
+        path="/ideologia"
+      />
       <PageHeader
         title="Nuestra Ideología"
         subtitle="Los principios que guían cada decisión y definen la forma en que operamos para la industria mexicana."

@@ -1,3 +1,4 @@
+import SEO from "@/components/seo/SEO"
 import PageHeader from "@/components/layout/PageHeader"
 import {
   ClipboardCheck,
@@ -53,6 +54,11 @@ const commitments = [
 export default function PoliticaCalidadPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Política de Calidad"
+        description="Política de calidad de Transportes Hidro Hidalguenses: compromiso con la excelencia operativa, satisfacción del cliente y mejora continua bajo estándares NOM."
+        path="/politica-calidad"
+      />
       <PageHeader
         title="Política de Calidad"
         subtitle="Nuestro compromiso formal con la excelencia operativa, la satisfacción del cliente y la mejora continua."

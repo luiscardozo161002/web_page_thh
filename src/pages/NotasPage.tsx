@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { toast } from 'sonner';
+import SEO from '@/components/seo/SEO';
 import { Newspaper, Image as ImageIcon, Sparkles, ChevronRight, Calendar, Trash2, Plus } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '@/hooks/useAuth';
@@ -293,6 +294,11 @@ const categories = ["Todos", "Días Célebres", "Reconocimientos", "Datos Curios
 export default function NotasPage() {
   return (
     <main className="bg-background">
+      <SEO
+        title="Notas y Eventos"
+        description="Noticias, eventos y comunicados oficiales de Transportes Hidro Hidalguenses. Mantente al día con las novedades de la empresa."
+        path="/notas"
+      />
       <PageHeader
         title="Notas & Eventos"
         subtitle="Noticias de la empresa, fechas alusivas y datos fascinantes sobre nuestra industria."
