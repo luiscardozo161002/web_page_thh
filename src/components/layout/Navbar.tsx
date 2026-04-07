@@ -81,10 +81,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center gap-2.5 min-w-0">
               <img
                 src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png"
-                className={cn(
-                  "w-10 h-10 shrink-0 rounded-full shadow-md transition-colors",
-                  scrolled ? "bg-navy-blue dark:bg-secondary" : "bg-white/20 border border-white/30"
-                )}
+                className="w-10 h-10 shrink-0 rounded-full shadow-md bg-transparent"
               />
               {/* Nombre corto solo en móvil */}
               <span className={cn("text-3xl font-bold tracking-tight transition-colors sm:hidden", textColor)}>
@@ -149,12 +146,15 @@ export default function Navbar() {
                 className={cn(
                   "p-2 rounded-full transition-all duration-300 hover:scale-110",
                   scrolled
-                    ? "bg-gray-100 dark:bg-gray-800 text-navy-blue dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    ? "bg-gray-100 dark:bg-gray-800 text-navy-blue dark:text-yellow-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                     : "bg-white/15 text-white border border-white/30 hover:bg-white/25"
                 )}
                 aria-label="Toggle theme"
               >
-                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                {theme === "dark"
+                  ? <Sun size={18} className="text-yellow-300" />
+                  : <Moon size={18} className="text-navy-blue dark:text-white" />
+                }
               </button>
             </div>
 
@@ -165,11 +165,14 @@ export default function Navbar() {
                 className={cn(
                   "p-2 rounded-full transition-all",
                   scrolled
-                    ? "bg-gray-100 dark:bg-gray-800 text-navy-blue dark:text-yellow-400"
-                    : "bg-white/15 text-white border border-white/30"
+                    ? "bg-gray-100 dark:bg-gray-800"
+                    : "bg-white/15 border border-white/30"
                 )}
               >
-                {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                {theme === "dark"
+                  ? <Sun size={18} className="text-yellow-300" />
+                  : <Moon size={18} className={scrolled ? "text-navy-blue" : "text-white"} />
+                }
               </button>
               <button
                 className={cn("p-2 rounded-md", textColor)}
