@@ -14,8 +14,9 @@ const ThemeContext = createContext<ThemeContextType>({
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem("thh-theme") as Theme
-    if (stored) return stored
+    // v2: clave nueva para ignorar preferencia oscura guardada anteriormente
+    const stored = localStorage.getItem("thh-theme-v2") as Theme
+    if (stored === "light" || stored === "dark") return stored
     return "light"
   })
 
@@ -26,7 +27,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.remove("dark")
     }
-    localStorage.setItem("thh-theme", theme)
+    localStorage.setItem("thh-theme-v2", theme)
   }, [theme])
 
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"))

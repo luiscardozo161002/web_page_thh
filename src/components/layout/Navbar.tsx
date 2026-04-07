@@ -144,16 +144,18 @@ export default function Navbar() {
               <button
                 onClick={toggleTheme}
                 className={cn(
-                  "p-2 rounded-full transition-all duration-300 hover:scale-110",
+                  "p-2 rounded-full transition-all duration-300 hover:scale-110 border",
                   scrolled
-                    ? "bg-gray-100 dark:bg-gray-800 text-navy-blue dark:text-yellow-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-                    : "bg-white/15 text-white border border-white/30 hover:bg-white/25"
+                    ? theme === "dark"
+                      ? "bg-gray-800 border-gray-600 hover:bg-gray-700"
+                      : "bg-white border-gray-200 hover:bg-gray-100 shadow-sm"
+                    : "bg-white/20 border-white/40 hover:bg-white/30"
                 )}
                 aria-label="Toggle theme"
               >
                 {theme === "dark"
                   ? <Sun size={18} className="text-yellow-300" />
-                  : <Moon size={18} className="text-navy-blue dark:text-white" />
+                  : <Moon size={18} className={scrolled ? "text-navy-blue" : "text-white"} />
                 }
               </button>
             </div>
@@ -163,10 +165,12 @@ export default function Navbar() {
               <button
                 onClick={toggleTheme}
                 className={cn(
-                  "p-2 rounded-full transition-all",
+                  "p-2 rounded-full transition-all border",
                   scrolled
-                    ? "bg-gray-100 dark:bg-gray-800"
-                    : "bg-white/15 border border-white/30"
+                    ? theme === "dark"
+                      ? "bg-gray-800 border-gray-600"
+                      : "bg-white border-gray-200 shadow-sm"
+                    : "bg-white/20 border-white/40"
                 )}
               >
                 {theme === "dark"
