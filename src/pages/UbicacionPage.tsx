@@ -32,7 +32,7 @@ export default function UbicacionPage() {
                   lines: [
                     "Calle Tercera No. 214,",
                     "Col. Fraccionamiento Popular,",
-                    "Pabellón de Arteaga, Aguascalientes. C.P. 20676",
+                    "Loc. Pabellón de Arteaga, Aguascalientes. C.P. 20676",
                   ],
                 },
                 {

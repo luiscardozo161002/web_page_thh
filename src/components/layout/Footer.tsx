@@ -135,7 +135,7 @@ export default function Footer() {
                     className="text-gray-400 text-sm leading-relaxed hover:text-white transition-colors"
                   >
                     Calle Tercera No. 214, Col. Fraccionamiento Popular,
-                    Pabellón de Arteaga, Ags. C.P. 20676
+                    Loc. Pabellón de Arteaga, Aguascalientes. C.P. 20676
                   </a>
                 </li>
                 <li className="flex items-center gap-3">

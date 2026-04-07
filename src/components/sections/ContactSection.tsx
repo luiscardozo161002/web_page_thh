@@ -11,7 +11,7 @@ const contactItems = [
     title: "Nuestra Dirección",
     lines: [
       "Calle Tercera No. 214, Col. Fraccionamiento Popular,",
-      "Pabellón de Arteaga, Aguascalientes. C.P. 20676",
+      "Loc. Pabellón de Arteaga, Aguascalientes. C.P. 20676",
     ],
     href: "https://maps.app.goo.gl/MJKhHojemQZDJXpt8",
   },

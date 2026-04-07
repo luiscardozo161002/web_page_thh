@@ -94,7 +94,7 @@ export default function AcercaPage() {
                 { label: "Representante Legal", value: "Lic. José Luis Martínez López" },
                 { label: "Gerente Administrativo", value: "Ing. Modesto Sebastián León" },
                 { label: "Rep. Administrativo", value: "Lic. Marilyn Medina Jiménez" },
-                { label: "Dirección", value: "Calle Tercera No. 214, Col. Fraccionamiento Popular, Pabellón de Arteaga, Ags. C.P. 20676" },
+                { label: "Dirección", value: "Calle Tercera No. 214, Col. Fraccionamiento Popular, Loc. Pabellón de Arteaga, Aguascalientes. C.P. 20676" },
                 { label: "Teléfono", value: "773 182 0988" },
                 { label: "Correo", value: "marilyn.thh@cooperativajuarez.com.mx" },
                 { label: "Redes Sociales", value: "@transporteshidro-hidalguenses" },

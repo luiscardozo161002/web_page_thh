@@ -6,12 +6,12 @@ const locations = [
   {
     name: "Pabellón de Arteaga, Aguascalientes",
     desc: "Sede principal — administración, transporte y operaciones mineras.",
-    detail: "Calle Tercera No. 214, Col. Fraccionamiento Popular, C.P. 20676",
+    detail: "Calle Tercera No. 214, Col. Fraccionamiento Popular, Loc. Pabellón de Arteaga, Ags. C.P. 20676",
   },
   {
-    name: "Puebla, México",
+    name: "Tula de Allende, Hidalgo y Puebla",
     desc: "Sede operativa — transporte público de carga y explotación de yacimientos.",
-    detail: "Información de dirección disponible próximamente.",
+    detail: "Tulancingo 103 Edif B 2, San Miguel Vindhó, Tula de Allende, Hidalgo. C.P. 42842",
   },
 ]
 
@@ -61,7 +61,7 @@ export default function FilialesPage() {
           <div className="h-[400px] w-full bg-gray-100 dark:bg-gray-800 rounded-[30px] overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700/50 grayscale hover:grayscale-0 transition-all duration-700 flex items-center justify-center flex-col gap-3 text-gray-400 dark:text-gray-600">
             <MapPin size={44} className="text-secondary" />
             <p className="font-semibold text-sm">Mapa de presencia THH</p>
-            <p className="text-xs">Aguascalientes · Puebla</p>
+            <p className="text-xs">Aguascalientes · Hidalgo y Puebla</p>
           </div>
         </div>
       </section>

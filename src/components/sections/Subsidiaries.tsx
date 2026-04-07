@@ -4,14 +4,14 @@ import { motion } from "framer-motion"
 const sedes = [
   {
     name: "Sede Principal — Aguascalientes",
-    address: "Calle Tercera No. 214, Col. Fraccionamiento Popular, Pabellón de Arteaga, Ags. C.P. 20676",
+    address: "Calle Tercera No. 214, Col. Fraccionamiento Popular, Loc. Pabellón de Arteaga, Aguascalientes. C.P. 20676",
     activity: "Administración general, transporte de carga, minería de materiales pétreos.",
     phone: "773 182 0988",
     status: "Sede activa",
   },
   {
-    name: "Sede Operativa — Puebla",
-    address: "Puebla, México. (Próximamente información de dirección completa)",
+    name: "Sede Operativa — Hidalgo y Puebla",
+    address: "Tulancingo 103 Edif B 2, San Miguel Vindhó, Tula de Allende, Hidalgo. C.P. 42842",
     activity: "Operaciones de transporte público de carga y explotación de yacimientos.",
     phone: "773 182 0988",
     status: "Sede activa",
