@@ -5,15 +5,37 @@ import ButtonMailto from "@/components/ui/ButtonMailto"
 
 const CONTACT_EMAIL = 'marilyn.thh@cooperativajuarez.com.mx'
 
-const contactItems = [
+interface ContactItem {
+  Icon: React.ElementType
+  title: string
+  badge?: string
+  activity?: string
+  lines: string[]
+  href: string | null
+}
+
+const contactItems: ContactItem[] = [
   {
     Icon: MapPin,
-    title: "Nuestra Dirección",
+    title: "Sede Principal — Aguascalientes",
+    badge: "Sede activa",
+    activity: "Administración general, transporte de carga, minería de materiales pétreos.",
     lines: [
       "Calle Tercera No. 214, Col. Fraccionamiento Popular,",
       "Loc. Pabellón de Arteaga, Aguascalientes. C.P. 20676",
     ],
     href: "https://maps.app.goo.gl/MJKhHojemQZDJXpt8",
+  },
+  {
+    Icon: MapPin,
+    title: "Sede Operativa — Hidalgo y Puebla",
+    badge: "Sede activa",
+    activity: "Operaciones de transporte público de carga y explotación de yacimientos.",
+    lines: [
+      "Tulancingo 103 Edif B 2, San Miguel Vindhó,",
+      "Tula de Allende, Hidalgo. C.P. 42842",
+    ],
+    href: "https://maps.google.com/?q=Tulancingo+103+Edif+B+2,+San+Miguel+Vindhó,+Tula+de+Allende,+Hidalgo",
   },
   {
     Icon: Phone,
@@ -95,14 +117,25 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Info cards */}
           <div className="space-y-5">
-            {contactItems.map(({ Icon, title, lines, href }) => {
+            {contactItems.map(({ Icon, title, badge, activity, lines, href }) => {
               const inner = (
                 <>
                   <div className="w-12 h-12 bg-navy-blue dark:bg-secondary text-white rounded-full flex items-center justify-center shrink-0 mr-5 shadow-lg group-hover:scale-110 transition-transform">
                     <Icon size={22} />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-navy-blue dark:text-white mb-1">{title}</h4>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <h4 className="font-bold text-navy-blue dark:text-white">{title}</h4>
+                      {badge && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                          {badge}
+                        </span>
+                      )}
+                    </div>
+                    {activity && (
+                      <p className="text-xs text-gray-500 dark:text-gray-500 italic mb-1">{activity}</p>
+                    )}
                     {lines.map((l, i) => (
                       <p key={i} className="text-gray-600 dark:text-gray-400 text-sm">{l}</p>
                     ))}
