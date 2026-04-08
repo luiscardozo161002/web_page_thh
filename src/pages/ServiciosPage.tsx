@@ -11,6 +11,24 @@ export default function ServiciosPage() {
         title="Servicios"
         description="Minería de piedra de cal, arena y grava, transporte público de carga, renta de maquinaria, barrenación y perforación, carga y acarreo. Soluciones integrales para la industria."
         path="/servicios"
+        jsonLd={{
+          '@type': 'Service',
+          'name': 'Servicios Industriales — Transportes Hidro Hidalguenses',
+          'provider': { '@type': 'LocalBusiness', 'name': 'Transportes Hidro Hidalguenses S.A. de C.V.' },
+          'areaServed': ['Aguascalientes', 'Hidalgo', 'Puebla'],
+          'hasOfferCatalog': {
+            '@type': 'OfferCatalog',
+            'name': 'Catálogo de Servicios THH',
+            'itemListElement': [
+              { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Minería de Piedra de Cal' } },
+              { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Minería de Arena y Grava' } },
+              { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Transporte Público de Carga' } },
+              { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Renta de Maquinaria' } },
+              { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Barrenación y Perforación' } },
+              { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Carga y Acarreo' } },
+            ],
+          },
+        }}
       />
       <PageHeader
         title="Nuestros Servicios"

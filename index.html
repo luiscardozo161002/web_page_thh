@@ -4,8 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
+    <!-- Favicon & Theme -->
     <link rel="icon" type="image/x-icon" href="/thh-logo-ico.ico" />
+    <meta name="theme-color" content="#002366" />
+    <meta name="msapplication-TileColor" content="#002366" />
+
+    <!-- Preconnect to external image CDN -->
+    <link rel="preconnect" href="https://i.ibb.co" />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
+
+    <!-- Sitemap hint -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Local / Geo SEO -->
+    <meta name="geo.region"    content="MX-AGU" />
+    <meta name="geo.placename" content="Pabellón de Arteaga, Aguascalientes, México" />
+    <meta name="geo.position"  content="22.1516;-102.3007" />
+    <meta name="ICBM"          content="22.1516, -102.3007" />
 
     <!-- Primary fallback (overridden per-page by react-helmet-async) -->
     <title>Transportes Hidro Hidalguenses S.A. de C.V. | Minería y Transporte Industrial</title>
@@ -33,18 +48,26 @@
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="TbdvRe0ee6_5B5KLD9oYHHTj9JETSJPrPz_fB6PG8uk" />
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "LocalBusiness",
+      "additionalType": "https://schema.org/TransportationCompany",
       "name": "Transportes Hidro Hidalguenses S.A. de C.V.",
       "alternateName": "THH",
       "url": "https://transporteshidrohidalguenses.cooperativajuarez.net",
-      "logo": "https://i.ibb.co/ZpzXD141/thh-oficial-copia.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://i.ibb.co/ZpzXD141/thh-oficial-copia.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://i.ibb.co/ZpzXD141/thh-oficial-copia.png",
       "description": "Empresa mexicana especializada en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga para la industria.",
-      "telephone": "+52-773-182-0988",
+      "telephone": "+527731820988",
       "email": "marilyn.thh@cooperativajuarez.com.mx",
+      "foundingDate": "1998",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Calle Tercera No. 214, Col. Fraccionamiento Popular",
@@ -53,14 +76,55 @@
         "postalCode": "20676",
         "addressCountry": "MX"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.1516,
+        "longitude": -102.3007
+      },
+      "hasMap": "https://maps.app.goo.gl/MJKhHojemQZDJXpt8",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61560554673446"
       ],
-      "areaServed": ["Aguascalientes", "Hidalgo", "Puebla"],
-      "foundingDate": "1998",
+      "areaServed": [
+        { "@type": "State", "name": "Aguascalientes" },
+        { "@type": "State", "name": "Hidalgo" },
+        { "@type": "State", "name": "Puebla" }
+      ],
+      "knowsAbout": [
+        "Minería de piedra de cal",
+        "Minería de arena y grava",
+        "Transporte público de carga",
+        "Renta de maquinaria",
+        "Barrenación y perforación",
+        "Carga y acarreo"
+      ],
       "numberOfEmployees": {
         "@type": "QuantitativeValue",
-        "minValue": 10
+        "minValue": 50
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Transportes Hidro Hidalguenses S.A. de C.V.",
+      "url": "https://transporteshidrohidalguenses.cooperativajuarez.net",
+      "inLanguage": "es-MX",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Transportes Hidro Hidalguenses S.A. de C.V.",
+        "logo": "https://i.ibb.co/ZpzXD141/thh-oficial-copia.png"
       }
     }
     </script>

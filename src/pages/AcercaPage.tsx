@@ -50,6 +50,18 @@ export default function AcercaPage() {
         title="Acerca de Nosotros"
         description="Conoce Transportes Hidro-Hidalguenses S.A. de C.V.: más de 25 años de experiencia en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga para la industria mexicana."
         path="/acerca"
+        jsonLd={{
+          '@type': 'AboutPage',
+          'name': 'Acerca de Transportes Hidro Hidalguenses',
+          'url': 'https://transporteshidrohidalguenses.cooperativajuarez.net/acerca',
+          'description': 'Empresa mexicana fundada en 1998, especializada en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga.',
+          'mainEntity': {
+            '@type': 'Organization',
+            'name': 'Transportes Hidro Hidalguenses S.A. de C.V.',
+            'foundingDate': '1998',
+            'numberOfEmployees': { '@type': 'QuantitativeValue', 'minValue': 50 },
+          },
+        }}
       />
       <PageHeader
         title="Acerca de THH"

@@ -10,6 +10,25 @@ export default function ContactoPage() {
         title="Contacto"
         description="Contáctanos por teléfono, correo o visítanos en Pabellón de Arteaga, Aguascalientes. Atendemos de lunes a viernes de 8:00 AM a 6:00 PM."
         path="/contacto"
+        jsonLd={{
+          '@type': 'ContactPage',
+          'name': 'Contacto — Transportes Hidro Hidalguenses',
+          'url': 'https://transporteshidrohidalguenses.cooperativajuarez.net/contacto',
+          'mainEntity': {
+            '@type': 'LocalBusiness',
+            'name': 'Transportes Hidro Hidalguenses S.A. de C.V.',
+            'telephone': '+527731820988',
+            'email': 'marilyn.thh@cooperativajuarez.com.mx',
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': 'Calle Tercera No. 214, Col. Fraccionamiento Popular',
+              'addressLocality': 'Pabellón de Arteaga',
+              'addressRegion': 'Aguascalientes',
+              'postalCode': '20676',
+              'addressCountry': 'MX',
+            },
+          },
+        }}
       />
       <PageHeader
         title="Contáctanos"

@@ -335,6 +335,19 @@ export default function BolsaTrabajoPage() {
         title="Bolsa de Trabajo"
         description="Únete al equipo de Transportes Hidro-Hidalguenses. Consulta nuestras vacantes disponibles en operación, logística y administración para trabajar en la industria minera y de transporte."
         path="/bolsa-de-trabajo"
+        jsonLd={{
+          '@type': 'CollectionPage',
+          'name': 'Bolsa de Trabajo — Transportes Hidro Hidalguenses',
+          'url': 'https://transporteshidrohidalguenses.cooperativajuarez.net/bolsa-de-trabajo',
+          'description': 'Vacantes disponibles en Transportes Hidro Hidalguenses para operadores, técnicos y personal administrativo en la industria minera y de transporte.',
+          'breadcrumb': {
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+              { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://transporteshidrohidalguenses.cooperativajuarez.net/' },
+              { '@type': 'ListItem', 'position': 2, 'name': 'Bolsa de Trabajo', 'item': 'https://transporteshidrohidalguenses.cooperativajuarez.net/bolsa-de-trabajo' },
+            ],
+          },
+        }}
       />
       <PageHeader
         title="Bolsa de Trabajo"

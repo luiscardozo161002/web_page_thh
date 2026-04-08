@@ -11,6 +11,7 @@ interface SEOProps {
   image?: string
   type?: 'website' | 'article'
   noIndex?: boolean
+  jsonLd?: Record<string, unknown>
 }
 
 export default function SEO({
@@ -20,6 +21,7 @@ export default function SEO({
   image = OG_IMAGE,
   type = 'website',
   noIndex = false,
+  jsonLd,
 }: SEOProps) {
   const fullTitle = `${title} | ${SITE_NAME}`
   const url = `${BASE_URL}${path}`
@@ -46,6 +48,13 @@ export default function SEO({
       <meta name="twitter:title"       content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image"       content={image} />
+
+      {/* ── Per-page JSON-LD ── */}
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify({ '@context': 'https://schema.org', ...jsonLd })}
+        </script>
+      )}
     </Helmet>
   )
 }
