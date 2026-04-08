@@ -192,10 +192,11 @@ export default function ContactSection() {
               </div>
 
               <div>
-                <label className="block text-navy-blue dark:text-white text-xs font-bold mb-2 uppercase tracking-wider">
+                <label htmlFor="servicio" className="block text-navy-blue dark:text-white text-xs font-bold mb-2 uppercase tracking-wider">
                   Servicio de Interés
                 </label>
                 <select
+                  id="servicio"
                   name="servicio"
                   value={form.servicio}
                   onChange={handleChange}

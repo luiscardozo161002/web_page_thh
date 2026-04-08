@@ -100,7 +100,7 @@ export default function AboutContent() {
                   <div className="w-12 h-12 bg-secondary/10 dark:bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                     <Icon className="text-secondary group-hover:text-white transition-colors" size={24} />
                   </div>
-                  <h4 className="font-bold text-lg text-navy-blue dark:text-white mb-2">{title}</h4>
+                  <h3 className="font-bold text-lg text-navy-blue dark:text-white mb-2">{title}</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">{desc}</p>
                 </div>
               ))}

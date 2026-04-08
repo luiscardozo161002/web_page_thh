@@ -24,8 +24,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Decorative blobs */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-primary/30 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute top-1/4 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
+      <div aria-hidden="true" className="absolute bottom-1/4 right-10 w-96 h-96 bg-primary/30 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center text-center pt-24 pb-36">
