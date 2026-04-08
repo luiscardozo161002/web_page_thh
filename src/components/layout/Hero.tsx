@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { ChevronDown, Phone, ArrowRight, Briefcase, Users, Building2 } from "lucide-react"
+import { Phone, ArrowRight, Briefcase, Users, Building2 } from "lucide-react"
 
 const stats = [
   { icon: Briefcase, value: "200+", label: "Soluciones operativas" },
@@ -110,18 +110,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
-        aria-label="Explorar contenido"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/60 gap-1 hover:text-white/90 transition-colors duration-300 cursor-pointer group"
-      >
-        <span className="text-xs uppercase tracking-widest font-semibold">Explorar</span>
-        <ChevronDown size={20} className="animate-bounce group-hover:scale-110 transition-transform" />
-      </motion.button>
     </div>
   )
 }
