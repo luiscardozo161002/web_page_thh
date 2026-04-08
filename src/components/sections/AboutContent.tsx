@@ -17,7 +17,7 @@ export default function AboutContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative group">
               <div className="relative bg-gradient from-navy-blue to-blue-950 rounded-full overflow-hidden shadow-2xl flex items-center justify-center">
-                <img src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png" className="object-cover w-full h-full" />
+                <img src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png" alt="Logo Transportes Hidro Hidalguenses" className="object-cover w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
               </div>
             </div>

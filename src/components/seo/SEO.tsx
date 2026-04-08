@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
 const SITE_NAME = 'Transportes Hidro Hidalguenses S.A. de C.V.'
-const BASE_URL  = 'https://web-page-thh.firebaseapp.com'
+const BASE_URL  = 'https://transporteshidrohidalguenses.cooperativajuarez.net'
 const OG_IMAGE  = 'https://i.ibb.co/ZpzXD141/thh-oficial-copia.png'
 
 interface SEOProps {

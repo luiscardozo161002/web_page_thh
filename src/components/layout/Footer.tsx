@@ -18,8 +18,8 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-br from-navy-blue/95 via-navy-blue/90 to-black/95" />
 
       {/* Decorative blobs */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none translate-x-1/4 translate-y-1/4" />
+      <div aria-hidden="true" className="absolute top-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+      <div aria-hidden="true" className="absolute bottom-0 right-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none translate-x-1/4 translate-y-1/4" />
 
       <div className="relative z-10 pt-20 pb-8">
         <div className="container mx-auto px-4">
@@ -31,7 +31,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="inline-flex items-center space-x-3 mb-6">
-                <img src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png" className="w-12 h-12 rounded-full flex items-center justify-center font-black text-sm shadow-md transition-colors bg-white/20 text-white border border-white/30" />
+                <img src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png" alt="Logo Transportes Hidro Hidalguenses" className="w-12 h-12 rounded-full flex items-center justify-center font-black text-sm shadow-md transition-colors bg-white/20 text-white border border-white/30" />
                 <span className="text-white text-md font-light tracking-tight">
                   Transportes Hidro Hidalguenses</span>
 
@@ -49,9 +49,10 @@ export default function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Síguenos en Facebook"
                     className="w-9 h-9 bg-white/10 hover:bg-secondary border border-white/10 hover:border-secondary rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
                   >
-                    <Icon size={16} />
+                    <Icon size={16} aria-hidden="true" />
                   </a>
                 ))}
                 <a href="https://www.facebook.com/profile.php?id=61560554673446" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm leading-relaxed mb-6">@Transportes Hidro-Hidalguenses</a>

@@ -81,6 +81,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center gap-2.5 min-w-0">
               <img
                 src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png"
+                alt="Logo Transportes Hidro Hidalguenses"
                 className="w-10 h-10 shrink-0 rounded-full shadow-md bg-transparent"
               />
               {/* Nombre corto solo en móvil */}
@@ -151,7 +152,7 @@ export default function Navbar() {
                       : "bg-white border-gray-200 hover:bg-gray-100 shadow-sm"
                     : "bg-white/20 border-white/40 hover:bg-white/30"
                 )}
-                aria-label="Toggle theme"
+                aria-label={theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
               >
                 {theme === "dark"
                   ? <Sun size={18} className="text-yellow-300" />
@@ -164,6 +165,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-3 lg:hidden">
               <button
                 onClick={toggleTheme}
+                aria-label={theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
                 className={cn(
                   "p-2 rounded-full transition-all border",
                   scrolled
@@ -179,6 +181,7 @@ export default function Navbar() {
                 }
               </button>
               <button
+                aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
                 className={cn("p-2 rounded-md", textColor)}
                 onClick={() => setIsOpen(!isOpen)}
               >
@@ -214,7 +217,7 @@ export default function Navbar() {
               <span className="text-xl font-bold text-navy-blue dark:text-white">
                 THH<span className="text-blue-600">.</span>
               </span>
-              <button onClick={() => setIsOpen(false)} className="text-navy-blue dark:text-white p-1">
+              <button onClick={() => setIsOpen(false)} aria-label="Cerrar menú" className="text-navy-blue dark:text-white p-1">
                 <X size={26} />
               </button>
             </div>
