@@ -56,7 +56,7 @@ export default function PoliticaCalidadPage() {
     <main className="bg-background">
       <SEO
         title="Política de Calidad"
-        description="Política de calidad de Transportes Hidro Hidalguenses: compromiso con la excelencia operativa, satisfacción del cliente y mejora continua bajo estándares NOM."
+        description="Política de calidad de Transportes Hidro-Hidalguenses: compromiso con la excelencia operativa, satisfacción del cliente y mejora continua bajo estándares NOM."
         path="/politica-calidad"
       />
       <PageHeader

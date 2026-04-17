@@ -31,9 +31,9 @@ export default function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="inline-flex items-center space-x-3 mb-6">
-                <img src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png" alt="Logo Transportes Hidro Hidalguenses" className="w-12 h-12 rounded-full flex items-center justify-center font-black text-sm shadow-md transition-colors bg-white/20 text-white border border-white/30" />
+                <img src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png" alt="Logo Transportes Hidro-Hidalguenses" className="w-12 h-12 rounded-full flex items-center justify-center font-black text-sm shadow-md transition-colors bg-white/20 text-white border border-white/30" />
                 <span className="text-white text-md font-light tracking-tight">
-                  Transportes Hidro Hidalguenses</span>
+                  Transportes Hidro-Hidalguenses</span>
 
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">

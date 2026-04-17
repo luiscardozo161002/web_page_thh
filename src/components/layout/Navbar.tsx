@@ -81,7 +81,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center gap-2.5 min-w-0">
               <img
                 src="https://i.ibb.co/ZpzXD141/thh-oficial-copia.png"
-                alt="Logo Transportes Hidro Hidalguenses"
+                alt="Logo Transportes Hidro-Hidalguenses"
                 className="w-10 h-10 shrink-0 rounded-full shadow-md bg-transparent"
               />
               {/* Nombre corto solo en móvil */}
@@ -90,11 +90,11 @@ export default function Navbar() {
               </span>
               {/* Nombre medio en tablet */}
               <span className={cn("hidden sm:block lg:hidden text-3xl font-bold tracking-tight transition-colors", textColor)}>
-                Transportes Hidro Hidalguenses
+                Transportes Hidro-Hidalguenses
               </span>
               {/* Nombre completo en desktop */}
               <span className={cn("hidden lg:block text-md font-bold tracking-tight transition-colors", textColor)}>
-                Transportes Hidro Hidalguenses S.A. de C.V.
+                Transportes Hidro-Hidalguenses S.A. de C.V.
               </span>
             </Link>
 

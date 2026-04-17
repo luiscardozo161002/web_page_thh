@@ -52,12 +52,12 @@ export default function AcercaPage() {
         path="/acerca"
         jsonLd={{
           '@type': 'AboutPage',
-          'name': 'Acerca de Transportes Hidro Hidalguenses',
+          'name': 'Acerca de Transportes Hidro-Hidalguenses',
           'url': 'https://transporteshidrohidalguenses.cooperativajuarez.net/acerca',
           'description': 'Empresa mexicana fundada en 1998, especializada en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga.',
           'mainEntity': {
             '@type': 'Organization',
-            'name': 'Transportes Hidro Hidalguenses S.A. de C.V.',
+            'name': 'Transportes Hidro-Hidalguenses S.A. de C.V.',
             'foundingDate': '1998',
             'numberOfEmployees': { '@type': 'QuantitativeValue', 'minValue': 50 },
           },

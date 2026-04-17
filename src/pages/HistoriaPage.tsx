@@ -38,7 +38,7 @@ export default function HistoriaPage() {
     <main className="bg-background">
       <SEO
         title="Nuestra Historia"
-        description="Más de 25 años de trayectoria en minería y transporte industrial. Conoce los hitos que marcaron el crecimiento de Transportes Hidro Hidalguenses desde 1998."
+        description="Más de 25 años de trayectoria en minería y transporte industrial. Conoce los hitos que marcaron el crecimiento de Transportes Hidro-Hidalguenses desde 1998."
         path="/historia"
       />
       <PageHeader

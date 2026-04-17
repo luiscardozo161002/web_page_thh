@@ -12,11 +12,11 @@ export default function ContactoPage() {
         path="/contacto"
         jsonLd={{
           '@type': 'ContactPage',
-          'name': 'Contacto — Transportes Hidro Hidalguenses',
+          'name': 'Contacto — Transportes Hidro-Hidalguenses',
           'url': 'https://transporteshidrohidalguenses.cooperativajuarez.net/contacto',
           'mainEntity': {
             '@type': 'LocalBusiness',
-            'name': 'Transportes Hidro Hidalguenses S.A. de C.V.',
+            'name': 'Transportes Hidro-Hidalguenses S.A. de C.V.',
             'telephone': '+527731820988',
             'email': 'marilyn.thh@cooperativajuarez.com.mx',
             'address': {

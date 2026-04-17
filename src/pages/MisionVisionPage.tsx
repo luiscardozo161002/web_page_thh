@@ -8,7 +8,7 @@ export default function MisionVisionPage() {
     <main className="bg-background">
       <SEO
         title="Misión y Visión"
-        description="Conoce la misión y visión de Transportes Hidro Hidalguenses: excelencia operativa, innovación y compromiso con la industria mexicana."
+        description="Conoce la misión y visión de Transportes Hidro-Hidalguenses: excelencia operativa, innovación y compromiso con la industria mexicana."
         path="/mision-y-vision"
       />
       <PageHeader

@@ -1,6 +1,6 @@
-# Transportes Hidro Hidalguenses — Sitio Web Corporativo
+# Transportes Hidro-Hidalguenses — Sitio Web Corporativo
 
-Sitio web oficial de **Transportes Hidro Hidalguenses S.A. de C.V.**, empresa mexicana especializada en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga para la industria.
+Sitio web oficial de **Transportes Hidro-Hidalguenses S.A. de C.V.**, empresa mexicana especializada en explotación de yacimientos, manejo de materiales pétreos y transporte público de carga para la industria.
 
 ## Stack tecnológico
 
@@ -138,5 +138,5 @@ develop ──── PR ──► CI checks ──► merge
 
 ## Licencia
 
-Proyecto privado — © 2026 Transportes Hidro Hidalguenses S.A. de C.V.
+Proyecto privado — © 2026 Transportes Hidro-Hidalguenses S.A. de C.V.
 Todos los derechos reservados.

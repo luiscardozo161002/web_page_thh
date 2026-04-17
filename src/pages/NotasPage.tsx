@@ -112,7 +112,7 @@ function NewsSectionComponent() {
       },
       cancel: {
         label: 'Cancelar',
-        onClick: () => {},
+        onClick: () => { },
       },
     });
   };
@@ -177,11 +177,10 @@ function NewsSectionComponent() {
             return (
               <div
                 key={item._row}
-                className={`group bg-white dark:bg-gray-800/60 rounded-3xl overflow-hidden shadow-md border dark:border-gray-700/50 transition-all duration-500 backdrop-blur-sm ${
-                  editMode
+                className={`group bg-white dark:bg-gray-800/60 rounded-3xl overflow-hidden shadow-md border dark:border-gray-700/50 transition-all duration-500 backdrop-blur-sm ${editMode
                     ? 'border-blue-300 dark:border-blue-600/50 ring-2 ring-blue-100 dark:ring-blue-900/30'
                     : 'border-gray-100 hover:shadow-2xl dark:hover:shadow-black/40'
-                } ${isSaving ? 'opacity-70' : ''}`}
+                  } ${isSaving ? 'opacity-70' : ''}`}
               >
                 <div className="relative h-56 overflow-hidden">
                   <img
@@ -296,7 +295,7 @@ export default function NotasPage() {
     <main className="bg-background">
       <SEO
         title="Notas y Eventos"
-        description="Noticias, eventos y comunicados oficiales de Transportes Hidro Hidalguenses. Mantente al día con las novedades de la empresa."
+        description="Noticias, eventos y comunicados oficiales de Transportes Hidro-Hidalguenses. Mantente al día con las novedades de la empresa."
         path="/notas"
       />
       <PageHeader
@@ -312,11 +311,10 @@ export default function NotasPage() {
             {categories.map((cat, i) => (
               <button
                 key={cat}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
-                  i === 0
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${i === 0
                     ? "bg-navy-blue dark:bg-secondary text-white shadow-md"
                     : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-secondary hover:text-secondary"
-                }`}
+                  }`}
               >
                 {cat}
               </button>

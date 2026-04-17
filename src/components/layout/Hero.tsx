@@ -49,7 +49,7 @@ export default function Hero() {
         >
           Transportes
           <br />
-          <span className="text-white drop-shadow-lg">Hidro Hidalguenses</span>
+          <span className="text-white drop-shadow-lg">Hidro-Hidalguenses</span>
         </motion.h1>
 
         {/* Subtitle */}

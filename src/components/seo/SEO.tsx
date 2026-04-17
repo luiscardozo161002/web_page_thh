@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 
-const SITE_NAME = 'Transportes Hidro Hidalguenses S.A. de C.V.'
-const BASE_URL  = 'https://transporteshidrohidalguenses.cooperativajuarez.net'
-const OG_IMAGE  = 'https://i.ibb.co/ZpzXD141/thh-oficial-copia.png'
+const SITE_NAME = 'Transportes Hidro-Hidalguenses S.A. de C.V.'
+const BASE_URL = 'https://transporteshidrohidalguenses.cooperativajuarez.net'
+const OG_IMAGE = 'https://i.ibb.co/ZpzXD141/thh-oficial-copia.png'
 
 interface SEOProps {
   title: string
@@ -35,19 +35,19 @@ export default function SEO({
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* ── Open Graph ── */}
-      <meta property="og:type"        content={type} />
-      <meta property="og:site_name"   content={SITE_NAME} />
-      <meta property="og:title"       content={fullTitle} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:url"         content={url} />
-      <meta property="og:image"       content={image} />
-      <meta property="og:locale"      content="es_MX" />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:locale" content="es_MX" />
 
       {/* ── Twitter Card ── */}
-      <meta name="twitter:card"        content="summary_large_image" />
-      <meta name="twitter:title"       content={fullTitle} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image"       content={image} />
+      <meta name="twitter:image" content={image} />
 
       {/* ── Per-page JSON-LD ── */}
       {jsonLd && (

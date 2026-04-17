@@ -26,7 +26,7 @@ export default function IdeologiaPage() {
     <main className="bg-background">
       <SEO
         title="Ideología"
-        description="Los principios y pilares ideológicos que definen la identidad operativa y cultural de Transportes Hidro Hidalguenses S.A. de C.V."
+        description="Los principios y pilares ideológicos que definen la identidad operativa y cultural de Transportes Hidro-Hidalguenses S.A. de C.V."
         path="/ideologia"
       />
       <PageHeader

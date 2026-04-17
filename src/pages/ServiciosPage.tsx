@@ -13,8 +13,8 @@ export default function ServiciosPage() {
         path="/servicios"
         jsonLd={{
           '@type': 'Service',
-          'name': 'Servicios Industriales — Transportes Hidro Hidalguenses',
-          'provider': { '@type': 'LocalBusiness', 'name': 'Transportes Hidro Hidalguenses S.A. de C.V.' },
+          'name': 'Servicios Industriales — Transportes Hidro-Hidalguenses',
+          'provider': { '@type': 'LocalBusiness', 'name': 'Transportes Hidro-Hidalguenses S.A. de C.V.' },
           'areaServed': ['Aguascalientes', 'Hidalgo', 'Puebla'],
           'hasOfferCatalog': {
             '@type': 'OfferCatalog',

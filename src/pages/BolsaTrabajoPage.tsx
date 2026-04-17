@@ -116,7 +116,7 @@ function JobBoardSection() {
       },
       cancel: {
         label: 'Cancelar',
-        onClick: () => {},
+        onClick: () => { },
       },
     });
   };
@@ -185,125 +185,124 @@ function JobBoardSection() {
             jobs.map((job) => {
               const isSaving = saving === job._row;
 
-            return (
-              <div
-                key={job._row}
-                className={`group bg-white dark:bg-gray-800/60 p-5 md:p-7 rounded-3xl shadow-sm border dark:border-gray-700/50 transition-all duration-300 backdrop-blur-sm ${
-                  editMode
-                    ? 'border-blue-300 dark:border-blue-600/50 ring-2 ring-blue-100 dark:ring-blue-900/30'
-                    : 'border-gray-100 hover:shadow-xl dark:hover:shadow-black/30 hover:border-blue-600/30'
-                } ${isSaving ? 'opacity-70' : ''}`}
-              >
-                {/* ── Fila superior: icono + título + badge ── */}
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-11 h-11 md:w-14 md:h-14 bg-blue-50 dark:bg-navy-blue/30 text-navy-blue dark:text-blue-300 rounded-full flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                    <Briefcase size={20} />
+              return (
+                <div
+                  key={job._row}
+                  className={`group bg-white dark:bg-gray-800/60 p-5 md:p-7 rounded-3xl shadow-sm border dark:border-gray-700/50 transition-all duration-300 backdrop-blur-sm ${editMode
+                      ? 'border-blue-300 dark:border-blue-600/50 ring-2 ring-blue-100 dark:ring-blue-900/30'
+                      : 'border-gray-100 hover:shadow-xl dark:hover:shadow-black/30 hover:border-blue-600/30'
+                    } ${isSaving ? 'opacity-70' : ''}`}
+                >
+                  {/* ── Fila superior: icono + título + badge ── */}
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-11 h-11 md:w-14 md:h-14 bg-blue-50 dark:bg-navy-blue/30 text-navy-blue dark:text-blue-300 rounded-full flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                      <Briefcase size={20} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      {editMode ? (
+                        <input
+                          value={job.PUESTO}
+                          onChange={(e) => handleChange(job._row, 'PUESTO', e.target.value)}
+                          className="text-lg font-bold text-navy-blue dark:text-white bg-transparent border-b-2 border-blue-400 outline-none w-full"
+                          placeholder="Nombre del puesto"
+                        />
+                      ) : (
+                        <h3 className="text-lg md:text-xl font-bold text-navy-blue dark:text-white leading-tight">
+                          {job.PUESTO}
+                        </h3>
+                      )}
+                      {editMode ? (
+                        <input
+                          value={job.TIPO}
+                          onChange={(e) => handleChange(job._row, 'TIPO', e.target.value)}
+                          className="mt-1 text-xs font-bold px-3 py-1 rounded-full outline-none w-32 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+                          placeholder="Tipo"
+                        />
+                      ) : (
+                        <span className={`inline-block mt-1 text-xs font-bold px-3 py-0.5 rounded-full ${job.TAG}`}>
+                          {job.TIPO}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    {editMode ? (
-                      <input
-                        value={job.PUESTO}
-                        onChange={(e) => handleChange(job._row, 'PUESTO', e.target.value)}
-                        className="text-lg font-bold text-navy-blue dark:text-white bg-transparent border-b-2 border-blue-400 outline-none w-full"
-                        placeholder="Nombre del puesto"
-                      />
-                    ) : (
-                      <h3 className="text-lg md:text-xl font-bold text-navy-blue dark:text-white leading-tight">
-                        {job.PUESTO}
-                      </h3>
-                    )}
-                    {editMode ? (
-                      <input
-                        value={job.TIPO}
-                        onChange={(e) => handleChange(job._row, 'TIPO', e.target.value)}
-                        className="mt-1 text-xs font-bold px-3 py-1 rounded-full outline-none w-32 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
-                        placeholder="Tipo"
-                      />
-                    ) : (
-                      <span className={`inline-block mt-1 text-xs font-bold px-3 py-0.5 rounded-full ${job.TAG}`}>
-                        {job.TIPO}
-                      </span>
-                    )}
+
+                  {/* ── Meta: ubicación + tipo ── */}
+                  <div className="flex flex-wrap gap-3 text-sm text-gray-500 dark:text-gray-400 mb-3 pl-1">
+                    <span className="flex items-center gap-1">
+                      <MapPin size={13} className="text-blue-600 shrink-0" />
+                      {editMode ? (
+                        <input
+                          value={job.UBICACION}
+                          onChange={(e) => handleChange(job._row, 'UBICACION', e.target.value)}
+                          className="bg-transparent border-b border-gray-300 dark:border-gray-600 outline-none w-40"
+                          placeholder="Ubicación"
+                        />
+                      ) : (
+                        <span>{job.UBICACION}</span>
+                      )}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock size={13} className="text-blue-600 shrink-0" />
+                      {job.TIPO}
+                    </span>
                   </div>
-                </div>
 
-                {/* ── Meta: ubicación + tipo ── */}
-                <div className="flex flex-wrap gap-3 text-sm text-gray-500 dark:text-gray-400 mb-3 pl-1">
-                  <span className="flex items-center gap-1">
-                    <MapPin size={13} className="text-blue-600 shrink-0" />
-                    {editMode ? (
-                      <input
-                        value={job.UBICACION}
-                        onChange={(e) => handleChange(job._row, 'UBICACION', e.target.value)}
-                        className="bg-transparent border-b border-gray-300 dark:border-gray-600 outline-none w-40"
-                        placeholder="Ubicación"
-                      />
-                    ) : (
-                      <span>{job.UBICACION}</span>
-                    )}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock size={13} className="text-blue-600 shrink-0" />
-                    {job.TIPO}
-                  </span>
-                </div>
-
-                {/* ── Descripción ── */}
-                {editMode ? (
-                  <textarea
-                    value={job.DESCRIPCION}
-                    onChange={(e) => handleChange(job._row, 'DESCRIPCION', e.target.value)}
-                    rows={2}
-                    className="w-full text-sm text-gray-500 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded-lg p-2 outline-none resize-none italic mb-4"
-                    placeholder="Descripción del puesto"
-                  />
-                ) : (
-                  <p className="text-gray-500 dark:text-gray-400 text-sm italic leading-relaxed mb-4 pl-1">
-                    "{job.DESCRIPCION}"
-                  </p>
-                )}
-
-                {isSaving && (
-                  <p className="text-xs text-blue-400 mb-2 animate-pulse pl-1">Guardando...</p>
-                )}
-
-                {/* ── Footer: salario + botón ── */}
-                <div className="flex items-center justify-between gap-3 pt-3 border-t border-gray-100 dark:border-gray-700/50">
-                  <span className="flex items-center gap-1.5 text-navy-blue dark:text-gray-300 font-bold text-sm">
-                    <BadgeDollarSign size={15} className="text-blue-600 shrink-0" />
-                    {editMode ? (
-                      <input
-                        value={job.SALARIO}
-                        onChange={(e) => handleChange(job._row, 'SALARIO', e.target.value)}
-                        className="bg-transparent border-b border-gray-300 dark:border-gray-600 outline-none w-36 text-sm"
-                        placeholder="Salario"
-                      />
-                    ) : (
-                      <span>{job.SALARIO}</span>
-                    )}
-                  </span>
-
-                  {editMode && user ? (
-                    <button
-                      onClick={() => handleDelete(job._row)}
-                      className="flex items-center gap-1.5 bg-red-100 hover:bg-red-500 text-red-600 hover:text-white px-4 py-2 rounded-full text-sm font-bold transition-colors shrink-0"
-                    >
-                      <Trash2 size={14} />
-                      Eliminar
-                    </button>
+                  {/* ── Descripción ── */}
+                  {editMode ? (
+                    <textarea
+                      value={job.DESCRIPCION}
+                      onChange={(e) => handleChange(job._row, 'DESCRIPCION', e.target.value)}
+                      rows={2}
+                      className="w-full text-sm text-gray-500 dark:text-gray-400 bg-transparent border border-gray-200 dark:border-gray-700 rounded-lg p-2 outline-none resize-none italic mb-4"
+                      placeholder="Descripción del puesto"
+                    />
                   ) : (
-                    <ButtonMailto
-                      mailto={`mailto:marilyn.thh@cooperativajuarez.com.mx?subject=${encodeURIComponent(`Postulación: ${job.PUESTO}`)}&body=${encodeURIComponent(`Hola, me interesa postularme para el puesto de ${job.PUESTO} (${job.UBICACION}).\n\nMi nombre es: \nMi correo es: \nMi teléfono es: \n\nAdjunto mi CV y quedo en espera de su respuesta.\n\nSaludos.`)}`}
-                      className="shrink-0 bg-navy-blue dark:bg-blue-600 text-white px-5 py-2.5 rounded-full font-bold hover:bg-blue-800 dark:hover:bg-blue-700 transition-colors flex items-center gap-2 text-sm shadow-md"
-                    >
-                      Postularme
-                      <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                    </ButtonMailto>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm italic leading-relaxed mb-4 pl-1">
+                      "{job.DESCRIPCION}"
+                    </p>
                   )}
+
+                  {isSaving && (
+                    <p className="text-xs text-blue-400 mb-2 animate-pulse pl-1">Guardando...</p>
+                  )}
+
+                  {/* ── Footer: salario + botón ── */}
+                  <div className="flex items-center justify-between gap-3 pt-3 border-t border-gray-100 dark:border-gray-700/50">
+                    <span className="flex items-center gap-1.5 text-navy-blue dark:text-gray-300 font-bold text-sm">
+                      <BadgeDollarSign size={15} className="text-blue-600 shrink-0" />
+                      {editMode ? (
+                        <input
+                          value={job.SALARIO}
+                          onChange={(e) => handleChange(job._row, 'SALARIO', e.target.value)}
+                          className="bg-transparent border-b border-gray-300 dark:border-gray-600 outline-none w-36 text-sm"
+                          placeholder="Salario"
+                        />
+                      ) : (
+                        <span>{job.SALARIO}</span>
+                      )}
+                    </span>
+
+                    {editMode && user ? (
+                      <button
+                        onClick={() => handleDelete(job._row)}
+                        className="flex items-center gap-1.5 bg-red-100 hover:bg-red-500 text-red-600 hover:text-white px-4 py-2 rounded-full text-sm font-bold transition-colors shrink-0"
+                      >
+                        <Trash2 size={14} />
+                        Eliminar
+                      </button>
+                    ) : (
+                      <ButtonMailto
+                        mailto={`mailto:marilyn.thh@cooperativajuarez.com.mx?subject=${encodeURIComponent(`Postulación: ${job.PUESTO}`)}&body=${encodeURIComponent(`Hola, me interesa postularme para el puesto de ${job.PUESTO} (${job.UBICACION}).\n\nMi nombre es: \nMi correo es: \nMi teléfono es: \n\nAdjunto mi CV y quedo en espera de su respuesta.\n\nSaludos.`)}`}
+                        className="shrink-0 bg-navy-blue dark:bg-blue-600 text-white px-5 py-2.5 rounded-full font-bold hover:bg-blue-800 dark:hover:bg-blue-700 transition-colors flex items-center gap-2 text-sm shadow-md"
+                      >
+                        Postularme
+                        <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                      </ButtonMailto>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          }))}
+              );
+            }))}
         </div>
 
         <div className="mt-16 text-center">
@@ -337,9 +336,9 @@ export default function BolsaTrabajoPage() {
         path="/bolsa-de-trabajo"
         jsonLd={{
           '@type': 'CollectionPage',
-          'name': 'Bolsa de Trabajo — Transportes Hidro Hidalguenses',
+          'name': 'Bolsa de Trabajo — Transportes Hidro-Hidalguenses',
           'url': 'https://transporteshidrohidalguenses.cooperativajuarez.net/bolsa-de-trabajo',
-          'description': 'Vacantes disponibles en Transportes Hidro Hidalguenses para operadores, técnicos y personal administrativo en la industria minera y de transporte.',
+          'description': 'Vacantes disponibles en Transportes Hidro-Hidalguenses para operadores, técnicos y personal administrativo en la industria minera y de transporte.',
           'breadcrumb': {
             '@type': 'BreadcrumbList',
             'itemListElement': [
